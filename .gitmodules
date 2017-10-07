@@ -1,0 +1,12 @@
+[submodule "pack/plugins/start/auto-pair"]
+	path = pack/plugins/start/auto-pair
+	url = https://github.com/jiangmiao/auto-pairs.git
+[submodule "pack/plugins/start/vim-go"]
+	path = pack/plugins/start/vim-go
+	url = https://github.com/fatih/vim-go.git
+[submodule "pack/plugins/start/ycm"]
+	path = pack/plugins/start/ycm
+	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "pack/plugins/start/gruvbox"]
+	path = pack/plugins/start/gruvbox
+	url = https://github.com/morhetz/gruvbox.git
