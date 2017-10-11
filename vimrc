@@ -1,10 +1,16 @@
 set number
+syntax on
 filetype indent on 
 set t_Co=256
 set background=dark
 colo gruvbox
 set noet ts=2 sw=2 sts=2
 set smartindent
+set incsearch 
+set hlsearch
+set smartcase
+set showmatch
+
 
 
 autocmd BufRead,BufWritePre *.html normal gg=G
