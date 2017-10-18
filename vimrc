@@ -1,5 +1,6 @@
 set number
 syntax on
+filetype plugin on
 filetype indent on 
 set t_Co=256
 set background=dark
@@ -10,7 +11,7 @@ set incsearch
 set hlsearch
 set smartcase
 set showmatch
-
+let mapleader = "\<Space>"
 
 
 autocmd BufRead,BufWritePre *.html normal gg=G
