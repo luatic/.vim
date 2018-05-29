@@ -58,13 +58,4 @@ let g:netrw_liststyle = 3
 let g:netrw_winsize = 10
 
 let g:jsx_ext_required = 0
-
-"python with virtualenv support
-"py << EOF
-"import os
-"import sys
-"if 'VIRTUAL_ENV' in os.environ:
-"  project_base_dir = os.environ['VIRTUAL_ENV']
-"  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-"  execfile(activate_this, dict(__file__=activate_this))
-"EOF
+au BufWritePre *.js Neoformat
