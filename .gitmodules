@@ -16,6 +16,6 @@
 [submodule "pack/plugins/start/vim-jsx"]
 	path = pack/plugins/start/vim-jsx
 	url = https://github.com/mxw/vim-jsx
-[submodule "pack/plugins/start/vim-prettier"]
-	path = pack/plugins/start/vim-prettier
-	url = https://github.com/prettier/vim-prettier
+[submodule "pack/plugins/start/neoformat"]
+	path = pack/plugins/start/neoformat
+	url = https://github.com/sbdchd/neoformat
