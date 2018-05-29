@@ -12,9 +12,12 @@ set hlsearch
 set smartcase
 set showmatch
 let mapleader = "\<Space>"
+set encoding=utf-8
 
 
 autocmd BufRead,BufWritePre *.html normal gg=G
+autocmd BufRead,BufWritePre *.py normal gg=G
+au Filetype python setl et ts=2 sw=2
 
 "golang
 let g:go_highlight_types = 1
@@ -53,3 +56,15 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_winsize = 10
+
+let g:jsx_ext_required = 0
+
+"python with virtualenv support
+"py << EOF
+"import os
+"import sys
+"if 'VIRTUAL_ENV' in os.environ:
+"  project_base_dir = os.environ['VIRTUAL_ENV']
+"  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+"  execfile(activate_this, dict(__file__=activate_this))
+"EOF
