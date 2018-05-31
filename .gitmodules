@@ -19,3 +19,6 @@
 [submodule "pack/plugins/start/neoformat"]
 	path = pack/plugins/start/neoformat
 	url = https://github.com/sbdchd/neoformat
+[submodule "pack/plugins/start/vim-styled-components"]
+	path = pack/plugins/start/vim-styled-components
+	url = https://github.com/styled-components/vim-styled-components
