@@ -22,3 +22,6 @@
 [submodule "pack/plugins/start/vim-styled-components"]
 	path = pack/plugins/start/vim-styled-components
 	url = https://github.com/styled-components/vim-styled-components
+[submodule "pack/plugins/start/yajs"]
+	path = pack/plugins/start/yajs
+	url = https://github.com/othree/yajs.vim
