@@ -27,6 +27,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'Valloric/YouCompleteMe'
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 
