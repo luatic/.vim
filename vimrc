@@ -4,7 +4,6 @@ filetype plugin on
 filetype indent on 
 set t_Co=256
 set background=dark
-colo gruvbox
 set noet ts=2 sw=2 sts=2
 set smartindent
 set incsearch 
@@ -14,11 +13,24 @@ set showmatch
 let mapleader = "\<Space>"
 set encoding=utf-8
 
-
-autocmd BufRead,BufWritePre *.html normal gg=G
-autocmd BufRead,BufWritePre *.py normal gg=G
+au BufRead,BufWritePre *.html normal gg=G
+au BufRead,BufWritePre *.py normal gg=G
 au Filetype python setl et ts=2 sw=2
 
+call plug#begin('~/.vim/plugged')
+
+Plug 'alvan/vim-closetag'
+Plug 'morhetz/gruvbox'
+Plug 'jiangmiao/auto-pairs'
+Plug 'sbdchd/neoformat'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'Valloric/YouCompleteMe'
+
+call plug#end()
+
+colo gruvbox
 "golang
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
