@@ -1,3 +1,6 @@
+if has('python3')
+  silent! python3 1
+endif
 set number
 syntax on
 filetype plugin on
@@ -19,8 +22,11 @@ au Filetype python setl et ts=2 sw=2
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'xolox/vim-lua-inspect'
+Plug 'xolox/vim-misc'
 Plug 'alvan/vim-closetag'
 Plug 'morhetz/gruvbox'
+Plug 'connorholyday/vim-snazzy'
 Plug 'jiangmiao/auto-pairs'
 Plug 'sbdchd/neoformat'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -28,11 +34,21 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'Valloric/YouCompleteMe'
 Plug 'mattn/emmet-vim'
+Plug 'uarun/vim-protobuf'
 
 call plug#end()
 
 colo gruvbox
+"colo snazzy
+"let g:SnazzyTransparent = 1
 "golang
+let g:go_highlight_function_calls = 1
+let g:go_highlight_generate_tags = 1
+let g:go_highlight_string_spellcheck = 1
+let g:go_highlight_format_strings = 1
+let g:go_highlight_variable_declarations = 1
+let g:go_highlight_variable_assignments = 1
+let g:go_highlight_function_arguments = 1
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
