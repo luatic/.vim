@@ -1,7 +1,7 @@
 if has('python3')
   silent! python3 1
 endif
-set number
+set number relativenumber
 syntax on
 filetype plugin on
 filetype indent on 
@@ -39,8 +39,6 @@ Plug 'uarun/vim-protobuf'
 call plug#end()
 
 colo gruvbox
-"colo snazzy
-"let g:SnazzyTransparent = 1
 "golang
 let g:go_highlight_function_calls = 1
 let g:go_highlight_generate_tags = 1
