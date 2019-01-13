@@ -35,6 +35,7 @@ Plug 'mxw/vim-jsx'
 Plug 'Valloric/YouCompleteMe'
 Plug 'mattn/emmet-vim'
 Plug 'uarun/vim-protobuf'
+Plug 'https://github.com/tpope/vim-fugitive.git'
 
 call plug#end()
 
