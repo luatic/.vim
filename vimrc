@@ -1,6 +1,3 @@
-if has('python3')
-  silent! python3 1
-endif
 set number relativenumber
 syntax on
 filetype plugin on
@@ -30,6 +27,7 @@ Plug 'connorholyday/vim-snazzy'
 Plug 'jiangmiao/auto-pairs'
 Plug 'sbdchd/neoformat'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'stamblerre/gocode', { 'rtp': 'vim', 'do':' ~/.vim/plugged/gocode/vim/symlink.sh' }
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'Valloric/YouCompleteMe'
