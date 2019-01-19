@@ -1,7 +1,7 @@
+set nocompatible
 set number relativenumber
 syntax on
-filetype plugin on
-filetype indent on 
+filetype plugin indent on
 set t_Co=256
 set background=dark
 set noet ts=2 sw=2 sts=2
@@ -13,6 +13,7 @@ set showmatch
 let mapleader = "\<Space>"
 set encoding=utf-8
 
+au FileType *  setlocal formatoptions-=cro
 au BufRead,BufWritePre *.html normal gg=G
 au BufRead,BufWritePre *.py normal gg=G
 au Filetype python setl et ts=2 sw=2
@@ -27,7 +28,6 @@ Plug 'connorholyday/vim-snazzy'
 Plug 'jiangmiao/auto-pairs'
 Plug 'sbdchd/neoformat'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'stamblerre/gocode', { 'rtp': 'vim', 'do':' ~/.vim/plugged/gocode/vim/symlink.sh' }
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'Valloric/YouCompleteMe'
