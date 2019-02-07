@@ -1,3 +1,7 @@
+if has('python3')
+  silent! python3 1
+endif
+set wildmenu
 set nocompatible
 set number relativenumber
 syntax on
@@ -22,6 +26,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'xolox/vim-lua-inspect'
 Plug 'xolox/vim-misc'
+Plug 'w0rp/ale'
 Plug 'alvan/vim-closetag'
 Plug 'morhetz/gruvbox'
 Plug 'jiangmiao/auto-pairs'
