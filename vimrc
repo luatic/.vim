@@ -2,10 +2,10 @@ if has('python3')
   silent! python3 1
 endif
 set wildmenu
+set nocompatible
 set number relativenumber
 syntax on
-filetype plugin on
-filetype indent on 
+filetype plugin indent on
 set t_Co=256
 set background=dark
 set noet ts=2 sw=2 sts=2
@@ -17,6 +17,7 @@ set showmatch
 let mapleader = "\<Space>"
 set encoding=utf-8
 
+au FileType *  setlocal formatoptions-=cro
 au BufRead,BufWritePre *.html normal gg=G
 au BufRead,BufWritePre *.py normal gg=G
 au Filetype python setl et ts=2 sw=2
@@ -37,6 +38,7 @@ Plug 'mxw/vim-jsx'
 Plug 'Valloric/YouCompleteMe'
 Plug 'mattn/emmet-vim'
 Plug 'uarun/vim-protobuf'
+Plug 'https://github.com/tpope/vim-fugitive.git'
 
 call plug#end()
 
