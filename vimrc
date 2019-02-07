@@ -24,7 +24,6 @@ Plug 'xolox/vim-lua-inspect'
 Plug 'xolox/vim-misc'
 Plug 'alvan/vim-closetag'
 Plug 'morhetz/gruvbox'
-Plug 'connorholyday/vim-snazzy'
 Plug 'jiangmiao/auto-pairs'
 Plug 'sbdchd/neoformat'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -33,7 +32,6 @@ Plug 'mxw/vim-jsx'
 Plug 'Valloric/YouCompleteMe'
 Plug 'mattn/emmet-vim'
 Plug 'uarun/vim-protobuf'
-Plug 'https://github.com/tpope/vim-fugitive.git'
 
 call plug#end()
 
