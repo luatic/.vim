@@ -1,6 +1,3 @@
-if has('python3')
-  silent! python3 1
-endif
 set wildmenu
 set nocompatible
 set number relativenumber
@@ -24,8 +21,6 @@ au Filetype python setl et ts=2 sw=2
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'xolox/vim-lua-inspect'
-Plug 'xolox/vim-misc'
 Plug 'w0rp/ale'
 Plug 'alvan/vim-closetag'
 Plug 'morhetz/gruvbox'
@@ -35,7 +30,6 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'Valloric/YouCompleteMe'
-Plug 'mattn/emmet-vim'
 Plug 'uarun/vim-protobuf'
 
 call plug#end()
@@ -85,6 +79,6 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_winsize = 10
-
+"vim-jsx high *.js files
 let g:jsx_ext_required = 0
 au BufWritePre *.js Neoformat
