@@ -2,26 +2,23 @@ set wildmenu
 set nocompatible
 set number relativenumber
 syntax on
-filetype plugin indent on
 set t_Co=256
 set background=dark
 set noet ts=2 sw=2 sts=2
-set smartindent
 set incsearch 
 set hlsearch
 set smartcase
 set showmatch
 let mapleader = "\<Space>"
 set encoding=utf-8
-
 au FileType *  setlocal formatoptions-=cro
-au BufRead,BufWritePre *.html normal gg=G
-au BufRead,BufWritePre *.py normal gg=G
-au Filetype python setl et ts=2 sw=2
+filetype indent on 
+set smartindent
+au BufRead,BufWrite *.html normal gg=G
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'w0rp/ale'
+Plug 'w0rp/ale' 
 Plug 'alvan/vim-closetag'
 Plug 'morhetz/gruvbox'
 Plug 'jiangmiao/auto-pairs'
@@ -32,7 +29,7 @@ Plug 'mxw/vim-jsx'
 Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
-
+"colorscheme
 colo gruvbox
 "golang
 let g:go_highlight_function_calls = 1
@@ -77,9 +74,9 @@ let g:netrw_winsize = 10
 let g:jsx_ext_required = 0
 "pangloss
 let g:javascript_plugin_jsdoc = 1
-"ale prettier
+"ale 
 let g:ale_fixers = {
-			\'javascript': ['prettier'],
-			\'css': ['prettier'],
+			\   'javascript': ['prettier'],
+			\   'css': ['prettier'],
 			\}
 let g:ale_fix_on_save = 1
