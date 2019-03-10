@@ -75,6 +75,8 @@ let g:netrw_liststyle = 3
 let g:netrw_winsize = 10
 "vim-jsx high *.js files
 let g:jsx_ext_required = 0
+"pangloss
+let g:javascript_plugin_jsdoc = 1
 "ale prettier
 let g:ale_fixers = {
 			\'javascript': ['prettier'],
