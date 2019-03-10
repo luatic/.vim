@@ -25,12 +25,11 @@ Plug 'w0rp/ale'
 Plug 'alvan/vim-closetag'
 Plug 'morhetz/gruvbox'
 Plug 'jiangmiao/auto-pairs'
-Plug 'sbdchd/neoformat'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'pangloss/vim-javascript'
+Plug 'leshill/vim-json'
 Plug 'mxw/vim-jsx'
 Plug 'Valloric/YouCompleteMe'
-Plug 'uarun/vim-protobuf'
 
 call plug#end()
 
@@ -56,29 +55,29 @@ let g:go_metalinter_deadline = "5s"
 let g:go_fmt_command = "goimports"
 let g:go_list_type = "quickfix"
 let g:go_template_autocreate = 0
-
 au FileType go nmap <Leader>gd <Plug>(go-doc)
 au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
 au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
 au FileType go nmap <Leader>gs <Plug>(go-doc-split)
 au FileType go nmap <Leader>gt <Plug>(go-doc-tab)
-
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
 au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <Leader>dt <Plug>(go-def-tab)
-
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
-
 "ycm
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
-
 "netrw
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_winsize = 10
 "vim-jsx high *.js files
 let g:jsx_ext_required = 0
-au BufWritePre *.js Neoformat
+"ale prettier
+let g:ale_fixers = {
+			\'javascript': ['prettier'],
+			\'css': ['prettier'],
+			\}
+let g:ale_fix_on_save = 1
