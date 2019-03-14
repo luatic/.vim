@@ -27,6 +27,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'leshill/vim-json'
 Plug 'mxw/vim-jsx'
 Plug 'Valloric/YouCompleteMe'
+Plug 'prettier/vim-prettier', { 'do': 'npm install'  }
 
 call plug#end()
 "colorscheme
@@ -75,8 +76,12 @@ let g:jsx_ext_required = 0
 "pangloss
 let g:javascript_plugin_jsdoc = 1
 "ale 
+let g:ale_linters = {
+			\ 'javascript': ['eslint']
+			\}
 let g:ale_fixers = {
 			\   'javascript': ['prettier'],
 			\   'css': ['prettier'],
+			\		'html': ['prettier']
 			\}
 let g:ale_fix_on_save = 1
