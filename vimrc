@@ -11,13 +11,12 @@ set smartcase
 set showmatch
 let mapleader = "\<Space>"
 set encoding=utf-8
-au FileType *  setlocal formatoptions-=cro
+au FileType,BufNewFile,BufRead,FileType,OptionSet *  setlocal formatoptions-=cro
 filetype indent on 
 set smartindent
-au BufRead,BufWrite *.html normal gg=G
+"au BufRead,BufWrite *.html normal gg=G
 
 call plug#begin('~/.vim/plugged')
-
 Plug 'w0rp/ale' 
 Plug 'alvan/vim-closetag'
 Plug 'morhetz/gruvbox'
@@ -27,8 +26,9 @@ Plug 'pangloss/vim-javascript'
 Plug 'leshill/vim-json'
 Plug 'mxw/vim-jsx'
 Plug 'Valloric/YouCompleteMe'
-
+Plug 'prettier/vim-prettier', { 'do': 'npm install'  }
 call plug#end()
+
 "colorscheme
 colo gruvbox
 "golang
@@ -77,6 +77,6 @@ let g:javascript_plugin_jsdoc = 1
 "ale 
 let g:ale_fixers = {
 			\   'javascript': ['prettier'],
-			\   'css': ['prettier'],
+			\   'css': ['prettier']
 			\}
 let g:ale_fix_on_save = 1
