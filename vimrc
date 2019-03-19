@@ -11,7 +11,7 @@ set smartcase
 set showmatch
 let mapleader = "\<Space>"
 set encoding=utf-8
-au FileType *  setlocal formatoptions-=cro
+au FileType,BufNewFile,BufRead,FileType,OptionSet *  setlocal formatoptions-=cro
 filetype indent on 
 set smartindent
 "au BufRead,BufWrite *.html normal gg=G
@@ -29,6 +29,7 @@ Plug 'mxw/vim-jsx'
 Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
+
 "colorscheme
 colo gruvbox
 "golang
