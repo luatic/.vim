@@ -14,7 +14,7 @@ set encoding=utf-8
 au FileType *  setlocal formatoptions-=cro
 filetype indent on 
 set smartindent
-au BufRead,BufWrite *.html normal gg=G
+"au BufRead,BufWrite *.html normal gg=G
 
 call plug#begin('~/.vim/plugged')
 
@@ -27,7 +27,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'leshill/vim-json'
 Plug 'mxw/vim-jsx'
 Plug 'Valloric/YouCompleteMe'
-Plug 'prettier/vim-prettier', { 'do': 'npm install'  }
 
 call plug#end()
 "colorscheme
@@ -76,12 +75,7 @@ let g:jsx_ext_required = 0
 "pangloss
 let g:javascript_plugin_jsdoc = 1
 "ale 
-let g:ale_linters = {
-			\ 'javascript': ['eslint']
-			\}
-let g:ale_fixers = {
-			\   'javascript': ['prettier'],
-			\   'css': ['prettier'],
-			\		'html': ['prettier']
-			\}
+let g:ale_fixers = { 'css': ['prettier'], 'javascript': ['prettier'], 'html': ['prettier']}
 let g:ale_fix_on_save = 1
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
