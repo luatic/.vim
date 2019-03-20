@@ -14,7 +14,7 @@ set encoding=utf-8
 au FileType,BufNewFile,BufRead,FileType,OptionSet *  setlocal formatoptions-=cro
 filetype indent on 
 set smartindent
-"au BufRead,BufWrite *.html normal gg=G
+au BufRead,BufWrite *.html normal gg=G
 
 call plug#begin('~/.vim/plugged')
 
@@ -78,5 +78,3 @@ let g:javascript_plugin_jsdoc = 1
 "ale 
 let g:ale_fixers = { 'css': ['prettier'], 'javascript': ['prettier'], 'html': ['prettier']}
 let g:ale_fix_on_save = 1
-let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
