@@ -85,3 +85,42 @@ let g:ale_fixers = {
 			\		'html': ['prettier']
 			\}
 let g:ale_fix_on_save = 1
+
+"custom start screen 
+fun! Start()
+	enew
+	setlocal
+			\ bufhidden=wipe
+	    \ buftype=nofile
+	    \ nobuflisted
+	    \ nocursorcolumn
+	    \ nocursorline
+	    \ nolist
+	    \ nonumber
+	    \ noswapfile
+	    \ norelativenumber
+	"call append('$' )
+	setlocal
+		 \ nomodifiable
+		 \ nomodified
+	nnoremap <buffer><silent> e :enew<CR>
+  nnoremap <buffer><silent> i :enew <bar> startinsert<CR>
+  nnoremap <buffer><silent> o :enew <bar> startinsert<CR>
+
+endfun
+
+if argc() == 0
+	autocmd VimEnter * call Start()
+endif
+
+
+
+
+
+
+
+
+
+
+
+
