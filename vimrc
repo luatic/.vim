@@ -76,14 +76,7 @@ let g:jsx_ext_required = 0
 "pangloss
 let g:javascript_plugin_jsdoc = 1
 "ale 
-let g:ale_linters = {
-			\ 'javascript': ['eslint']
-			\}
-let g:ale_fixers = {
-			\   'javascript': ['prettier'],
-			\   'css': ['prettier'],
-			\		'html': ['prettier']
-			\}
+let g:ale_fixers = { 'css': ['prettier'], 'javascript': ['prettier'], 'html': ['prettier']}
 let g:ale_fix_on_save = 1
 
 "custom start screen 
