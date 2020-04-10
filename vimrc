@@ -64,7 +64,10 @@ au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
-"ycm let g:ycm_autoclose_preview_window_after_insertion = 1 let g:ycm_autoclose_preview_window_after_completion = 1 "netrw
+"ycm 
+let g:ycm_autoclose_preview_window_after_insertion = 1 
+let g:ycm_autoclose_preview_window_after_completion = 1
+"netrw
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_winsize = 10
