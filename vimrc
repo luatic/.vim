@@ -18,7 +18,7 @@ au BufRead,BufWrite *.html normal gg=G
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'w0rp/ale' 
+Plug 'dense-analysis/ale'
 Plug 'alvan/vim-closetag'
 Plug 'morhetz/gruvbox'
 Plug 'jiangmiao/auto-pairs'
@@ -64,10 +64,7 @@ au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
-"ycm
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
-"netrw
+"ycm let g:ycm_autoclose_preview_window_after_insertion = 1 let g:ycm_autoclose_preview_window_after_completion = 1 "netrw
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_winsize = 10
@@ -76,5 +73,6 @@ let g:jsx_ext_required = 0
 "pangloss
 let g:javascript_plugin_jsdoc = 1
 "ale 
-let g:ale_fixers = { 'css': ['prettier'], 'javascript': ['prettier'], 'html': ['prettier']}
+let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
 let g:ale_fix_on_save = 1
+
