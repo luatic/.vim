@@ -12,13 +12,12 @@ set showmatch
 let mapleader = "\<Space>"
 set encoding=utf-8
 au FileType,BufNewFile,BufRead,FileType,OptionSet *  setlocal formatoptions-=cro
-filetype indent on 
 set smartindent
 au BufRead,BufWrite *.html normal gg=G
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'w0rp/ale' 
+Plug 'dense-analysis/ale'
 Plug 'alvan/vim-closetag'
 Plug 'morhetz/gruvbox'
 Plug 'jiangmiao/auto-pairs'
@@ -30,6 +29,7 @@ Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
 
+filetype indent on 
 "colorscheme
 colo gruvbox
 "golang
@@ -76,6 +76,5 @@ let g:jsx_ext_required = 0
 "pangloss
 let g:javascript_plugin_jsdoc = 1
 "ale 
-let g:ale_fixers = { 'css': ['prettier'], 'javascript': ['prettier'], 'html': ['prettier']}
+let g:ale_fixers = { 'css': ['prettier'], 'javascript': ['prettier'] }
 let g:ale_fix_on_save = 1
-
