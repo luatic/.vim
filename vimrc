@@ -12,7 +12,6 @@ set showmatch
 let mapleader = "\<Space>"
 set encoding=utf-8
 au FileType,BufNewFile,BufRead,FileType,OptionSet *  setlocal formatoptions-=cro
-filetype indent on 
 set smartindent
 au BufRead,BufWrite *.html normal gg=G
 
@@ -30,6 +29,7 @@ Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
 
+filetype indent on 
 "colorscheme
 colo gruvbox
 "golang
@@ -77,5 +77,5 @@ let g:jsx_ext_required = 0
 let g:javascript_plugin_jsdoc = 1
 "ale 
 let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
+let g:ale_fixers = { 'css': ['prettier'], 'javascript': ['prettier'] }
 let g:ale_fix_on_save = 1
-
