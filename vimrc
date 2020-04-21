@@ -13,11 +13,12 @@ let mapleader = "\<Space>"
 set encoding=utf-8
 au FileType,BufNewFile,BufRead,FileType,OptionSet *  setlocal formatoptions-=cro
 set smartindent
-au BufRead,BufWrite *.html normal gg=G
+"au BufRead,BufWrite *.html normal gg=G
 
 call plug#begin('~/.vim/plugged')
 
 Plug 'dense-analysis/ale'
+Plug 'prettier/vim-prettier', { 'do': 'npm install'  }
 Plug 'alvan/vim-closetag'
 Plug 'morhetz/gruvbox'
 Plug 'jiangmiao/auto-pairs'
@@ -76,5 +77,11 @@ let g:jsx_ext_required = 0
 "pangloss
 let g:javascript_plugin_jsdoc = 1
 "ale 
-let g:ale_fixers = { 'css': ['prettier'], 'javascript': ['prettier'] }
+let g:ale_fixers = {
+			\    'javascript': ['eslint'],
+			\    'typescript': ['prettier'],
+			\    'vue': ['eslint'],
+			\    'css': ['prettier'],
+			\    'html': ['prettier']
+			\}
 let g:ale_fix_on_save = 1
