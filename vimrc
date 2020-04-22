@@ -76,5 +76,5 @@ let g:jsx_ext_required = 0
 "pangloss
 let g:javascript_plugin_jsdoc = 1
 "ale 
-let b:ale_fixers = ['prettier'] 
+let g:ale_fixers = ['prettier'] 
 let g:ale_fix_on_save = 1
