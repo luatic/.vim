@@ -65,23 +65,18 @@ au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
-"ycm
-let g:ycm_autoclose_preview_window_after_insertion = 1
+"ycm 
+let g:ycm_autoclose_preview_window_after_insertion = 1 
 let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_disable_signature_help = 1
 "netrw
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_winsize = 10
-"vim-jsx high *.js files
+"vim-jsx 
 let g:jsx_ext_required = 0
 "pangloss
 let g:javascript_plugin_jsdoc = 1
 "ale 
-let g:ale_fixers = {
-			\    'javascript': ['eslint'],
-			\    'typescript': ['prettier'],
-			\    'vue': ['eslint'],
-			\    'css': ['prettier'],
-			\    'html': ['prettier']
-			\}
+let g:ale_fixers = ['prettier'] 
 let g:ale_fix_on_save = 1
