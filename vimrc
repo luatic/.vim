@@ -13,7 +13,7 @@ let mapleader = "\<Space>"
 set encoding=utf-8
 au FileType,BufNewFile,BufRead,FileType,OptionSet *  setlocal formatoptions-=cro
 set smartindent
-au BufRead,BufWrite *.html normal gg=G
+"au BufRead,BufWrite *.html normal gg=G
 
 call plug#begin('~/.vim/plugged')
 
@@ -71,11 +71,10 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_winsize = 10
-"vim-jsx high *.js files
+"vim-jsx 
 let g:jsx_ext_required = 0
 "pangloss
 let g:javascript_plugin_jsdoc = 1
 "ale 
-let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
-let g:ale_fixers = { 'css': ['prettier'], 'javascript': ['prettier'] }
+let b:ale_fixers = ['prettier'] 
 let g:ale_fix_on_save = 1
