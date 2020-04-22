@@ -67,6 +67,7 @@ au FileType go nmap <leader>t <Plug>(go-test)
 "ycm 
 let g:ycm_autoclose_preview_window_after_insertion = 1 
 let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_disable_signature_help = 1
 "netrw
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
