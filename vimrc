@@ -21,6 +21,7 @@ Plug 'dense-analysis/ale'
 Plug 'prettier/vim-prettier', { 'do': 'npm install'  }
 Plug 'alvan/vim-closetag'
 Plug 'morhetz/gruvbox'
+Plug 'mhartington/oceanic-next'
 Plug 'jiangmiao/auto-pairs'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'pangloss/vim-javascript'
@@ -32,7 +33,8 @@ call plug#end()
 
 filetype indent on 
 "colorscheme
-colo gruvbox
+"colo gruvbox
+colo OceanicNext
 "golang
 let g:go_highlight_function_calls = 1
 let g:go_highlight_generate_tags = 1
