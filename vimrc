@@ -27,6 +27,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'leshill/vim-json'
 Plug 'mxw/vim-jsx'
 Plug 'Valloric/YouCompleteMe'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
