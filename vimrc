@@ -18,7 +18,6 @@ set smartindent
 call plug#begin('~/.vim/plugged')
 
 Plug 'dense-analysis/ale'
-Plug 'prettier/vim-prettier', { 'do': 'npm install'  }
 Plug 'alvan/vim-closetag'
 Plug 'morhetz/gruvbox'
 Plug 'mhartington/oceanic-next'
