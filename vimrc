@@ -24,6 +24,7 @@ Plug 'mhartington/oceanic-next'
 Plug 'jiangmiao/auto-pairs'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'pangloss/vim-javascript'
+Plug 'tbastos/vim-lua'
 Plug 'leshill/vim-json'
 Plug 'mxw/vim-jsx'
 Plug 'Valloric/YouCompleteMe'
