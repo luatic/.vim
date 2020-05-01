@@ -1,3 +1,4 @@
+set clipboard=unnamed
 set wildmenu
 set nocompatible
 set number relativenumber
