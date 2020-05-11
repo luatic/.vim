@@ -35,8 +35,8 @@ call plug#end()
 
 filetype indent on 
 "colorscheme
-"colo gruvbox
-colo OceanicNext
+colo gruvbox
+"colo OceanicNext
 "golang
 let g:go_highlight_function_calls = 1
 let g:go_highlight_generate_tags = 1
