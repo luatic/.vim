@@ -1,4 +1,5 @@
 set clipboard=unnamed
+set noswapfile
 set wildmenu
 set nocompatible
 set number relativenumber
@@ -63,7 +64,11 @@ au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>t <Plug>(go-tesr)
+"fugitive 
+nmap <leader>gh :diffget //3<CR>
+nmap <leader>gu :diffget //2<CR>
+nmap <leader>gs :G<CR>
 "ycm 
 let g:ycm_autoclose_preview_window_after_insertion = 1 
 let g:ycm_autoclose_preview_window_after_completion = 1
