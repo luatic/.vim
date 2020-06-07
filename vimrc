@@ -27,6 +27,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'Valloric/YouCompleteMe'
 Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot'
+Plug 'robertbasic/vim-hugo-helper'
 
 call plug#end()
 
@@ -80,3 +81,4 @@ let g:netrw_winsize = 10
 "ale 
 let g:ale_fixers = ['prettier'] 
 let g:ale_fix_on_save = 1
+let g:hugohelper_spell_check_lang = 'en_gb'
